@@ -6,24 +6,51 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/my-styles.css"> 
   <style>
-   
-
-
-.cuebutton {
-  margin-bottom: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
-   border:2px solid cornflowerblue;
-}
-
-#trackStatusesDiv {
-  margin: auto;
-  border:1px solid cornflowerblue;
-  height:auto;
-  width: 60%;
+ #all {
+  background-color: lightgrey;
+  border-radius:10px;
   padding: 20px;
-  background-color: #ecf2f7;
+  border:1px solid;
+  display:inline-block;
+  /*height:500px;*/
+  margin:30px;
+  width:90%;
 }
+
+.cues {
+  color:blue;
+}
+
+.cues:hover {
+  text-decoration: underline;
+}
+
+.cues.current {
+  color:black;
+  font-weight: bold;
+}
+
+#myVideo {
+    display: block;
+    float : left;
+    margin-right: 2.85714%;
+    width: 65.71429%;
+    background-color: black;
+    position: relative;
+}
+
+#transcript {
+  padding: 10px;
+  border:1px solid;
+  float: left;
+  max-height: 225px;
+  overflow: auto;
+  width: 25%;
+  margin: 0;
+  font-size: 14px;
+  list-style: none;
+}
+
 
   </style>
 </head>
@@ -45,122 +72,35 @@
 
   <h2>Track and cue events</h2>
 
-<video id="myVideo" preload="metadata" controls crossOrigin="anonymous">
-    <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4" type="video/mp4">
-    <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.webm" type="video/webm">
-    <track label="English subtitles" kind="subtitles" srclang="en"
-           src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-en.vtt" >
-    <track label="Deutsch subtitles" kind="subtitles" srclang="de"
-           src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-de.vtt" default>
-    <track label="English chapters" kind="chapters" srclang="en"
-           src="https://mainline.i3s.unice.fr/mooc/elephants-dream-chapters-en.vtt">
- </video>
-
-    <h3>HTML track descriptions</h3>
-    <button class="cuebutton" id="buttonLoadFirstTrack" onclick="forceLoadTrack(0);" disabled>Start listening to enter and exit events for cues of track 0 (English subs)</button> 
-  <button class="cuebutton" id="buttonLoadThirdTrack" onclick="forceLoadTrack(1);" disabled>Start listening to enter and exit events for cues of track 1 (German subs)</button>
-    <div id="trackStatusesDiv">
-
-  </div>
-</body>
-
-<script>
-var video, htmlTracks;
-var trackStatusesDiv;
-var buttonLoadFirstTrack, buttonLoadThirdTrack;
-
-window.onload = function() {
-  // called when the page has been loaded
-  video = document.querySelector("#myVideo");
-  trackStatusesDiv = document.querySelector("#trackStatusesDiv");
-  buttonLoadFirstTrack = document.querySelector("#buttonLoadFirstTrack");
-       buttonLoadFirstTrack.disabled=false;                                         buttonLoadThirdTrack = document.querySelector("#buttonLoadThirdTrack");
-       buttonLoadThirdTrack.disabled=false;           
-  
-  // Get the tracks as HTML elements
-  htmlTracks = document.querySelectorAll("track");
-  
-  // display their status in a div under the video
-  displayTrackStatuses(htmlTracks);
-};
-
-
-
-function displayTrackStatuses(htmlTracks) {
-  trackStatusesDiv.innerHTML = "";
-    // display track info
-  for(var i = 0; i < htmlTracks.length; i++) {
-    var currentHtmlTrack = htmlTracks[i];
-    var currentTextTrack = currentHtmlTrack.track;
-        
-    var label = "<li>label = " + currentHtmlTrack.label + "</li>";
-    var kind = "<li>kind = " + currentHtmlTrack.kind + "</li>";
-    var lang = "<li>lang = " + currentHtmlTrack.srclang + "</li>";
-    var readyState = "<li>readyState = " + currentHtmlTrack.readyState + "</li>";
-    var mode = "<li>mode = " + currentTextTrack.mode + "</li>";
-    
-    trackStatusesDiv.innerHTML += "<li><b>Track:" + i + ":</b></li>" + "<ul>" + label + kind + lang + readyState + mode + "</ul>";   
-  }
-}
-
-function readContent(track) {
-   console.log("adding enter and exit listeners to all cues of this track");
-   
-   /* uncomment this in order to listen to cuechange events
-   // track is a loaded TextTrack
-   track.addEventListener("cuechange", function(e) {
-      var cue = this.activeCues[0]; 
-     
-     if (cue === undefined) return;
-     
-      trackStatusesDiv.innerHTML += 'entered cue id=' + cue.id + " " + cue.text + "<br>";
-   });
-    */ 
-  
-   trackStatusesDiv.innerHTML = "";
-  
-   // get the list of cues for that track   
-   var cues = track.cues;
-   // iterate on them
-   for(var i=0; i < cues.length; i++) {
-      // current cue
-      var cue = cues[i];
-      addCueListeners(cue);
-   }
-  
-  video.play();
-}
-
-function addCueListeners(cue) {
-  cue.onenter = function(){
-    trackStatusesDiv.innerHTML += 'entered cue id=' + this.id + " " + this.text + "<br>";
-  };
-  cue.onexit = function(){
-  trackStatusesDiv.innerHTML += 'exited cue id=' + this.id  + "<br>";
-  };
-} // end of addCueListeners...
-
-function getTrack(htmlTrack, callback) {
-  var textTrack = htmlTrack.track;
-  
-  
-  if(htmlTrack.readyState === 2) {
-     console.log("text track already loaded");
-     callback(textTrack);
-  } else {
-     // will force the track to be loaded
-         console.log("Forcing the text track to be loaded");
-
-     textTrack.mode = "hidden";
-     htmlTrack.addEventListener('load', function(e) {
-         callback(textTrack);
-    });
-  }
-}
-  function forceLoadTrack(n) {
-    getTrack(htmlTracks[n], readContent);
-  }    
-</script>
+ <section id="all">
+    <h1>Using the track API to extract the content of webVTT files in <code>&lt;track&gt;</code> elements</h1>
+    <p>Click on the buttons under the video to extract the english or german subtitles
+    </p>
+    <p>Look at the HTML and JS code.</p>
+    <p>
+      
+      <button disabled 
+              id="buttonEnglish" 
+              onclick="loadTranscript('en');">
+        Display English transcript
+      </button>
+      
+      <button disabled 
+              id="buttonDeutsch" 
+              onclick="loadTranscript('de');">
+        Display Deutsch transcript
+      </button>
+      
+    </p>
+    <video id="myVideo" preload="metadata" controls crossOrigin="anonymous">
+      <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.mp4" type="video/mp4">
+      <source src="https://mainline.i3s.unice.fr/mooc/elephants-dream-medium.webm" type="video/webm">
+      <track label="English subtitles" kind="subtitles" srclang="en" src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-en.vtt" >
+        <track label="Deutsch subtitles" kind="subtitles" srclang="de" src="https://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-de.vtt" default>
+          <track label="English chapters" kind="chapters" srclang="en" src="https://mainline.i3s.unice.fr/mooc/elephants-dream-chapters-en.vtt">
+    </video>
+    <div id="transcript"></div>
+  </section>
 
 </body>
 
