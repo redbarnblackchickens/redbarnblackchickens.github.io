@@ -34,15 +34,15 @@
   
   <h2>The HTML video element</h2>
 
-<video  id=ivanVideo controls width="540">
+<video  id="ivanVideo" preload="metadata" controls width="540" crossorigin="anonymous">
   <source src="assets/ivanmp4.mp4" type="video/mp4">
   <source src="assets/ivanwebm.webm" type="video/webm">
-     <track label="English subtitles" kind="subtitles" srclang="en"
-           src="testtranscript"> 
-    <track label="Deutsch subtitles" kind="subtitles" srclang="de"
-           src="testde" default>
-    <track label="English chapters" kind="chapters" srclang="en"
-           src="testde">  
+   <track 	label="English subtitles" 
+   			kind="subtitles" 
+   			srclang="en" 
+   			src="assets/subtitles-en.vtt"
+   			default >
+ 
 </video>
 
 
