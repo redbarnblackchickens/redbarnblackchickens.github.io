@@ -1,57 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Valerie Stoehr</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- based on https://www.w3schools.com/w3css/tryw3css_templates_architect.htm#home -->
+<head><style type="text/css">
 
-<head>
-  <title>HTML5 Multimedia</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/my-styles.css">
-  <style>
- 
+dfn {
+	font-style: italic;
+}
 
-  </style>
-</head>
+	canvas {
+	 
+
+   
+    margin:auto;
+		background-color: #993300;
+	}
+</style></head>
+<body onload = init();>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Valerie Stoehr</b> </a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+<!-- https://www.loc.gov/item/2018757053/ -->
+ <img class="w3-image" src="images/white.png" alt="" width="1500" height="800"> 
+
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>The Soul of Code</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+  </div>
+</header>
+
+<canvas id="myCanvas" width="1500" height =400>
+  Your browser does not support the canvas tag.</canvas>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+ <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Beasts and Serpants</div>
+        <img src="/w3images/house5.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Samplers</div>
+        <img src="/w3images/house2.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">In the Meeting House</div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Wadena County</div>
+        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+ <!-- <div class="w3-row-padding"> -->
+   
+   
+    <div class="w3-col l3 m6 w3-margin-bottom">
  
-<body id="opening">
-  <header>
-    <h1>HTML5 Multimedia Explorations</h1>
-   <section id="navigation">
-    <ul>
-      <li class="menu-item-current">Home</li>
-      <li><a href="m1.html">Module&nbsp;1</a></li>
-      <li><a href="m2.html">Module&nbsp;2</a></li>
-      <li>Module&nbsp;3</li>
-      <li>Module&nbsp;4</li>
-    </ul>
-  </section>
-    </header>
-    
-    <audio id="audio1" src="assets/264Millbrook.m4a" controls autoplay>
-  Your browser does not support the audio file.</audio>
+   
+  </div>
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+  <p>In 2020, Valerie Stoehr began a series of works that use code&#8212;HTML and CSS, the language of the web&#8212;as tools to explore constructs of power, gender, and spirituality in code.</p>
+
+<ul>
+<li>   <p>Stoehr's first series, <cite>Beasts and Serpants</cite>, reimagines a child's toy in digital form. The work is based on a traditional toy that a child manipulates to assemble imagined creatures from a combination of interchangable heads, torsos, legs from disparate animals. Stoehr's work considers the nature and purpose of play, how it functions in a digital landscape, and the cultural messages toys carry about gender, violence, and work versus leisure and play. The pieces explore how children use toys to make sense of and assign meaning to the world.  
+      </p></li>
+<li><p>Stoehr's second series, <cite>Samplers</cite>, juxtaposes needlework samplers with a coding alphabet. The concept known in the tech world as <dfn>semantic structure</dfn>, which is essentially an information map, is overlaid with components of hand-worked needlework samplers. In traditional stitched samplers, each letter of the alphabet is often portayed in a matrix, and additional symbols or representations of landscape of culture may appear. Stoehr's digital tapestries similarly expose the function and raw beauty of code and information architecture among elements of a digital landscape.</p></li>
+<li><p>The third series, <cite>In The Meetinghouse</cite>, presents Stoehr's Quaker experience through information design and data visualization. Stoehr uses coding elements to suggest the physical square or rectangle in which  Quakers assemble to meet for worship. Within the defined digital space, colored circular shapes morph over time. The works suggest the fluid and multidimensional experience that takes place in the assembled gathering.       
+      </p></li>
+<li>    <p>In <cite>Wadena County</cite>, in contrast to her earlier explorations of play, Stoehr considers the nature of work. Using a sparse digital vocabularly and an explosion of the matricies that mark her earlier work, Stoehr uses pattern and repetition to propose a digital statement of midwestern aesthetics, experience, and culture. The work is based on the barn beam from Stoehr's grandparent's Sebeka, Minnesota, farm.     
+      </p></li>
+</ul>
+
+
+
+  <p>Stoehr earned a women's studies degree from the University of Minnesota. In 1985 she moved to Oakland, CA, and began a career in the tech industry, documenting and designing emerging technologies. She currently resides in Afton, MN.</p>
+  </div>
+
+  <!-- <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/ivan-val-porch.jpg" alt="Valerie Stoehr with felt puppet against pale yellow wood siding" style="width:100%">
+      <h3>Valerie Stoehr</h3>
+      <p class="w3-opacity">Principle</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p> 
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div> --> 
+    <!-- <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/team1.jpg" alt="Jane" style="width:100%">
+      <h3>Jane Doe</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/team3.jpg" alt="Mike" style="width:100%">
+      <h3>Mike Ross</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/team4.jpg" alt="Dan" style="width:100%">
+      <h3>Dan Star</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+  -->
+
+  <!-- Contact Section
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+   -->
   
-     <p>Field recording by Rachel Wells Hall. Recorded September 2020 at the Graffiti Pier in Philadelphia, PA; <cite>Shenandoah Harmony</cite>, tune 264, Millbrook.</p>
-    
-    
-
-
-<!--
-
-     <img src="/img/ivan_val.jpg" width=40% alt="val with felt puppet in front of painted wood exterior siding">
-
-
-<video id=ivanVideo controls width="540">
-  <source src="/vid/ivanmp4.mp4" type="video/mp4">
-  <source src="/vid/ivanwebm.webm" type="video/webm">
-     <track label="English subtitles" kind="subtitles" srclang="en"
-           src="testtranscript" default > 
-    <track label="Deutsch subtitles" kind="subtitles" srclang="de"
-           src="testde" default>
-    <track label="English chapters" kind="chapters" srclang="en"
-           src="testde">  
-</video>
+<!-- Image of location/map 
+<div class="w3-container">
+  <img src="images/map.jpg" class="w3-image" style="width:100%">
+</div>
 -->
 
+<!-- End page content -->
+</div>
 
 
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16" id="contact">
+  <p>Valerie Stoehr<br>val@stoehrdesign.com<br>651.261.0947</p>
+</footer>
+<script>
+
+var canvas, ctx, w, h;
+ 
+function init() {
+  canvas = document.getElementById('myCanvas');
+  ctx = canvas.getContext('2d');
+  
+  w = canvas.width;
+  h = canvas.height;
+  
+  console.time("time to draw");
+  
+  for(var i=0; i < 1000; i++) {
+    var x = Math.random() * w;
+    var y = Math.random() * h;
+    var width = Math.random() * w;
+    var height = Math.random() * h;
+    
+    ctx.strokeRect(x, y, width, height); 
+  }
+  console.timeEnd("time to draw");
+}
+
+
+</script>
 </body>
-
 </html>
