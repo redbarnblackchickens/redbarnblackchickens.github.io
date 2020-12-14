@@ -4,125 +4,224 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" 
-href="https://www.w3schools.com/w3css/4/w3.css">
+href="">
 <!-- based on the architect template at https://www.w3schools.com/w3css/w3css_templates.asp
   see https://www.w3schools.com/w3css/tryw3css_templates_architect.htm#home 
 
-see also the book of shaders: https://thebookofshaders.com/edit.php#09/dots5.frag 
+  see color schemes: https://www.colorhexa.com/3a496c
+
 -->
 <head><style type="text/css">
 
-dfn {
-	font-style: italic;
+	
+
+	
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 20px 20px;
+    padding:  16px 0px 2px 0px; 
+    max-width: 1500px;
+   
 }
 
-	canvas {
-	 
 
+.content {
+	margin-left: 20px;
+	max-width: 80%;
+}
+.identification {
+
+}
+ .heroine {
+	font-size: 3em;
+
+	max-width: 1500px;
+}
+
+h2 {
+	border-bottom: 1px solid #d7d7d7;
+
+}
+
+html, body {
+    font-family: verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-left: 20px;
    
-    margin:auto;
-		background-color: #993300;
+}
+
+
+
+#about-body {
+	max-width: 80%;
+}
+
+.container-project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 20px;
+ width: 95%;
+padding-top: 25px;
+padding-bottom: 25px;
+max-width: 1500px;
+}
+
+.project-item {
+  flex-grow: 1;
+  height: 150px;
+  width: 250px;
+  margin: auto;
+  /* see: https://www.colorhexa.com/993300 */
+  background-color: #1f273a;
+  text-align: left;
+  border: 6px solid white;
+}
+
+.project-label { 
+  
+  padding-left: 15px;
+  color: white;
+  border-left: 7px solid #fdb825;
+  margin-left: 0px;
+}
+
+
+dfn {
+	;
+}
+
+
+	canvas {
+      /* starting color = #993300 */
+		background-color: #3a496c;
+		margin-bottom: 10px;
+		max-width: 95%;
+		margin-left: 20px;
+	    margin-right: auto;
 	}
+
+
+
+
+footer {
+	border-top: 2px solid #3a496c; ;
+}
+
+
 </style></head>
 <body onload = init();>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Valerie Stoehr</b> </a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+
+
+
+
+<!-- Header #1 test 
+<header  style="max-width:1500px;" id="home">
+
+    <h1>The Soul of Code</h1>
+
+
+<div id="wrapper">
+    <div style="position: absolute; z-index: 1; left: 10px; top: 10px; width:200px; height:100px; background-color: yellow;">
+        abcd
     </div>
-  </div>
+    <div style="position: absolute;  left: 50px; top: 20px; width:1500px; height:350px; background-color: green;">
+        1234
+    </div>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-<!-- https://www.loc.gov/item/2018757053/ -->
- <img class="w3-image" src="images/white.png" alt="" width="1500" height="800"> 
-
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>The Soul of Code</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
-  </div>
 </header>
 
-<canvas id="myCanvas" width="1500" height =400>
+-->
+
+
+<header>
+		<h2 class="identification">Valerie Stoehr</h2> 
+		<h1 class="heroine">The Soul of Code</h1>
+<!--
+<div>
+	 <a href="#home" class="nav-person"><b>Valerie Stoehr</b> </a>
+</div>
+
+<div>
+      <a href="#projects" class="nav-element" >Projects</a>
+      <a href="#about" class="nav-element">About</a>
+      <a href="#contact" class="nav-element">Contact</a>
+</div>
+</div>
+-->
+
+</header>
+
+
+
+<div class="canvas-1">
+<canvas id="myCanvas" width="1500" height =450>
   Your browser does not support the canvas tag.</canvas>
+</div>
+
+
+</header>
+
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
 
- <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+
+  <h2 id="projects">Projects</h2>
+
+ <div class="container-project">
+  <div class="project-item"><h3 class="project-label">Beasts and Serpents</h3></div>
+
+  <div class="project-item"><h3 class="project-label">Samplers</h3>
+  	<div class="project-item-background"></div>
   </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Beasts and Serpents</div>
-        <img src="/w3images/house5.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Samplers</div>
-        <img src="/w3images/house2.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">In the Meeting House</div>
-        <img src="/w3images/house3.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Olmsted County</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Wadena County</div>
-        <img src="/w3images/house4.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
+
+  <div class="project-item"><h3 class="project-label">In the Meetinghouse</h3>
+  	<div class="project-item-background"></div>
   </div>
 
- <!-- <div class="w3-row-padding"> -->
-   
-   
-    <div class="w3-col l3 m6 w3-margin-bottom">
+  
+ <div class="project-item"><h3 class="project-label">Olmsted County</h3>
+  	<div class="project-item-background"></div>
+  </div>
+
+
+ <div class="project-item"><h3 class="project-label">Wadena County</h3>
+  	<div class="project-item-background"></div>
+  </div>
+
  
-   
-  </div>
+</div>
+
+  
 
 
   <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+ 
+    <h2 id="about">About</h2>
+     <div class="content">
   <p>In 2020, Valerie Stoehr began a series of works that use code&#8212;HTML and CSS, the language of the web&#8212;as tools to explore constructs of power, gender, and spirituality in code.</p>
 
 <ul>
-<li>   <p>Stoehr's first series, <cite>Beasts and Serpents</cite>, reimagines a child's toy, and the role of toys in making sense and meaning from a child's experience, in digital form. The work is based on the traditional toy that children manipulate to display an imaginary creatures from interchangeable images of the upper, middle, and lower parts of animals.    
+<li>   <p>Stoehr's first series, <cite>Beasts and Serpents</cite>, reimagines a child's toy and considers the role of toys in shaping a child's understanding of the world. The work is based on the traditional toy that children manipulate to display an imaginary creatures from interchangeable images of the upper, middle, and lower parts of animals.
       </p></li>
 <li><p>Stoehr's second series, <cite>Samplers</cite>, juxtaposes hand-worked needlework samplers with a coding alphabet and the concept of semantic structure. In traditional stitched samplers, each letter of the alphabet is often portayed in a matrix, and additional symbols or representations of landscape of culture may appear. Stoehr's digital tapestries similarly expose the function and raw beauty of code and information architecture among elements of a digital landscape.</p></li>
 
-<li><p>The third series, <cite>In The Meetinghouse</cite>, references Stoehr's Quaker experience. Digital structures defined by code suggest the physical configuration in which Quakers assemble to meet for worship. Within those defined structures, objects transform over time and in relationship to each other. The work reflects on the fluid, multidimensional, and ultimately experiential component of a Quaker gathering for worship.          
+<li><p>The third series, <cite>In The Meetinghouse</cite>, references Stoehr's Quaker experience. Digital structures defined by code suggest the physical configuration in which Quakers assemble to meet for worship. Within those defined structures, objects transform over time and in relationship to each other. The work reflects on the fluid, multidimensional, and ultimately experiential components of a Quaker gathering for worship.          
       </p></li>
-<li>    <p>In <cite>Olmsted County</cite>, in contrast to earlier explorations of play, Stoehr uses sparse code structures to consider the nature of work. With a restrained digital vocabulary and an explosion of matricies, Stoehr uses pattern and repetition to propose a digital statement of midwestern aesthetics, experience, and culture. The work is based on the barn beam from Stoehr's grandparent's homestead in Sebeka, Minnesota.     
-      </p></li>
-      <li><p>The <cite>Wadena County</cite> series marks Stoehr's turn to pairing physical objects with her digital pieces. The first piece in the series is based on a barn beam from Stoehr's grandparent's homestead in Sebeka, Minnesota. The beam emerges vertically from a base. Smaller objects from the farmstead rise above the beam; their relative sizes and position suggest relationships to each other and to the supporting beam below. The pieces in this project explore and sometimes subvert the rules of information design in the physical and the digital world.
+<li><p><cite>Olmsted County</cite>, in contrast to earlier explorations of play, considers  work and its complicated relationship with leisure and play. With a restrained digital vocabulary and an explosion of matricies, Stoehr uses pattern and repetition to propose a digital statement of midwestern aesthetics, experience, and culture. </p>
+  <li><p>The <cite>Wadena County</cite> series marks Stoehr's turn to pairing physical objects with digital pieces. The first piece in the series is based on a barn beam from Stoehr's grandparent's homestead in Sebeka, Minnesota. The beam emerges vertically from a base, with other objects rising above it. The physical and digital pieces explore the rules of information design and the relevance of digital best practices to the physical world.
       </p></li>
 </ul>
 
 
 
-  <p>Stoehr earned a women's studies degree from the University of Minnesota. In 1985 she moved to Oakland, CA, and began a career in the tech industry, documenting and designing emerging technologies. She currently resides in Afton, MN.</p>
+  <p>Stoehr earned a women's studies degree from the University of Minnesota. In 1985 she moved to Oakland, CA, and began a career in the tech industry, documenting and designing emerging technologies. She now resides in Afton, MN.</p>
   </div>
 
   <!-- <div class="w3-row-padding w3-grayscale">
@@ -157,35 +256,17 @@ dfn {
   </div>
   -->
 
-  <!-- Contact Section
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Lets get in touch and talk about your next project.</p>
-    <form action="/action_page.php" target="_blank">
-      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
-   -->
   
-<!-- Image of location/map 
-<div class="w3-container">
-  <img src="images/map.jpg" class="w3-image" style="width:100%">
-</div>
--->
+ 
 
 <!-- End page content -->
 </div>
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16" id="contact">
-  <p>Valerie Stoehr<br>val@stoehrdesign.com<br>651.261.0947</p>
+
+<footer  >
+
 </footer>
 <script>
 
