@@ -102,6 +102,7 @@ dfn {
 		background-color: #660000;
 		margin-bottom: 10px;
 		max-width: 95%;
+		min-height: 200px;
 		margin-left: 20px;
 	    margin-right: auto;
 	}
@@ -110,7 +111,8 @@ dfn {
 
 
 footer {
-	border-top: 2px solid #black; ;
+	border-top: 2px solid #black; 
+	color: white;
 }
 
 
@@ -264,11 +266,10 @@ footer {
 <!-- End page content -->
 </div>
 
-
 <!-- Footer -->
 
 <footer  >
-
+valerie stoehr | copyright 2020
 </footer>
 <script>
 
@@ -283,7 +284,8 @@ function init() {
   
   console.time("time to draw");
   
-  for(var i=0; i < 1000; i++) {
+
+  for(var i=0; i < 900; i++) {
     var x = Math.random() * w;
     var y = Math.random() * h;
     var width = Math.random() * w;
