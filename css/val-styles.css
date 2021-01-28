@@ -3,7 +3,7 @@
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Segoe UI", sans-serif;
     font-weight: 400;  
-    border; 1px solid red;
+
 }
 
 
@@ -16,7 +16,7 @@ body {
     margin: auto;
     max-width: 800px;
     padding: 25px;
-    border: 1px solid red;
+ 
 }
 
 
