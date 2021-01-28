@@ -7,44 +7,44 @@
 
 <head>
 
-<style> 
+  <style>
 
-</style>
+canvas {
+  border: 1px solid gray;
+}
+
+  </style>
 
 </head>
 
 <header>
 		<h2>Valerie Stoehr: <a href="../index.html">The Soul of Code</a></h2> 
 			<p>Back to <a href="../meetinghouse.html">In the Meetinghouse</a></p>
-		<h1>In the Meetinghouse: Sketch Series B</h1>
+		<h1>In the Meetinghouse: Sketch 15</h1>
 
 </header>
 
-<figure>
-    <img src="../images/mhb.jpg" 
-    width=600px
-         alt="Alt text here">
-    <figcaption></figcaption>
-</figure>
-    
-  
-
-
-
-
-
-
-  
-
+<canvas id="myCanvas"  width="650" height="500"></canvas>
 
 
 <footer>
   <p>valerie stoehr | copyright 2021</p>
 
 </footer>
-<script>
 
 
+<script type="text/javascript">
+    var canvas=document.getElementById('myCanvas');
+    var context=canvas.getContext('2d');
+
+    context.font = "15pt Georgia";
+    context.lineWidth = 3;
+    context.fillStyle = "black";
+  
+    context.fillText("January 31, 2021 this is text in canvas", 50, 450);
+   
+
+</script>
 </script>
 </body>
 </html>
