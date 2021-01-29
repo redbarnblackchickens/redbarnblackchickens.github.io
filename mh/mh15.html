@@ -13,38 +13,70 @@ canvas {
   border: 1px solid gray;
 }
 
+
+canvas {
+      /* starting color = #993300 
+         then #3a496c             */
+    background-color: #7a0000;
+    margin-bottom: 10px;
+    max-width: 95%;
+    min-height: 200px;
+    margin-left: 20px;
+      margin-right: auto;
+  }
+
+
+
   </style>
 
 </head>
 
+<body onload = init();>
+
 <header>
 		<h2>Valerie Stoehr: <a href="../index.html">The Soul of Code</a></h2> 
 			<p>Back to <a href="../meetinghouse.html">In the Meetinghouse</a></p>
-		<h1>In the Meetinghouse: Sketch 15</h1>
+		<h1>In the Meetinghouse: Sketch 16</h1>
 
 </header>
 
-<canvas id="myCanvas"  width="650" height="500"></canvas>
+<canvas id="myCanvas"  width="550" height="500"></canvas>
 
-
+<p>The relative weights of the rectanges within the larger shape isn't correct; it needs to be more dense perhaps at the lower center and become more sparse moving upward and outward. 
 <footer>
   <p>valerie stoehr | copyright 2021</p>
 
 </footer>
 
 
-<script type="text/javascript">
-    var canvas=document.getElementById('myCanvas');
-    var context=canvas.getContext('2d');
+<script>
 
-    context.font = "15pt Georgia";
-    context.lineWidth = 3;
-    context.fillStyle = "black";
+
+
+var canvas, ctx, w, h;
+ 
+function init() {
+  canvas = document.getElementById('myCanvas');
+  ctx = canvas.getContext('2d');
   
-    context.fillText("January 31, 2021 this is text in canvas", 50, 450);
-   
+  w = canvas.width;
+  h = canvas.height;
+  
+  console.time("time to draw");
+  
+  for(var i=0; i < 300; i++) {
+    var x = Math.random() * w;
+    var y = Math.random() * h;
+    var width = Math.random() * w;
+    var height = Math.random() * h;
+    
+    ctx.strokeRect(x, y, width, height); 
+  }
+  console.timeEnd("time to draw");
+}
+
 
 </script>
-</script>
+
 </body>
 </html>
