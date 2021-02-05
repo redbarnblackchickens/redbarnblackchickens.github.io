@@ -3,37 +3,128 @@
 <title>Soul of Code</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="">
+
 
 <head>
-
 <style> 
+
+/* table of contents
+
+1.0 global styles
+
+2.0 typography
+
+3.0 components
+
+*/
+
+/*  =================
+	1.0 global styles
+	=================
+*/
+
+* {box-sizing: border-box;}
+
+body {
+margin: 0;
+min-height: 100vh;	
+display: grid;
+grid-template-columns: 1.5em 1fr 1.5em;
+grid-template-areas: 
+	"header header header"
+	"...... main   ......"
+	"...... side   ......"
+	"footer footer footer";
+}
+
+
+header {grid-area: header;}
+.main-content {grid-area: main;}
+.sidebar {grid-area: side;}
+footer {grid-area: footer;}
+
+header,
+.main-content,
+.sidebar,
+footer {
+	padding: 2em;
+}
+
+
+header { background: orange; }
+.main-content { background: lightblue;}
+.sidebar { background: ivory;}
+footer { background: darkorange;}
+
+@media only screen and (min-width: 860px) {
+	body {
+
+	grid-template-columns: 1.5em minmax(400px, 650px)
+		minmax(200px, 350px) 1.5em;
+	grid-template-areas: 
+	"header header header"
+	"...... main   ......"
+	"...... side   ......"
+	"footer footer footer";
+	}
+}
+
+canvas {
+	border: .75px solid black;
+
+}
+
+/*  =================
+	2.0 typography
+	=================
+*/
 
 </style>
 
+
 </head>
 
-<header>
-		<h2>Valerie Stoehr: <a href="../index.html">The Soul of Code</a></h2> 
-			<p>Back to <a href="../meetinghouse.html">In the Meetinghouse</a></p>
-		<h1>In the Meetinghouse: Sketch 1</h1>
 
+<body onload="init();">
+
+<header>
+		
+<nav class="menu">
+ 
+    <p><a href="../index.html">Home</a></p>
+    <p><a href="../sampler.html">Samplers</a></p>
+    <p><a href="#">About</a></p>
+
+</nav>
 </header>
 
-<figure>
-    <img src="../images/mh1.png"
-         alt="Alt text here">
-    <figcaption>As in a sampler, words at the bottom. And what if we treat this like the tradition of matching original song to someone else’s poetry, and vice versa. This drawing is my song; the text can be someone else's text, like shape note text to capture the experience of that moment or meeting.</figcaption>
-</figure>
-    
-  
 
 
+	<article class="main-content">
+	<h1>Sketch 1</h1>
+	<P>It was a summer day in the meetinghouse. This is about sketch #1.</P>	
+	<figure><canvas id="myCanvas"  width="350" height="295"></canvas><figcaption>Wednesday, July 13, 2003</figcaption></figure>
+	</article>
 
-
-
-
-  
+<aside class="sidebar">
+	<h2>HTML semantic elements</h2>
+<p>As a reminder, this [semantic] aside states that the semantic elements added in HTML5 are as follows. Use them as building blocks.</p>
+<ul>
+<li>article</li>
+<li>aside</li>
+<li>details</li>
+<li>figcaption</li>
+<li>figure</li>
+<li>footer</li>
+<li>header</li>
+<li>main</li>
+<li>mark</li>
+<li>nav</li>
+<li>section</li>
+<li>summary</li>
+<li>time</li>
+</ul>
+</aside>
 
 
 
@@ -43,6 +134,21 @@
 </footer>
 <script>
 
+function init() {
+    var canvas=document.getElementById('myCanvas');
+    var context=canvas.getContext('2d');
+
+
+   context.font = "normal normal 20px Courier";
+    context.lineWidth = 1;
+    context.fillStyle = "red";
+    context.fillText("x", 120, 180);
+
+    context.fillStyle = "black";
+    context.fillText("x", 55, 220);
+    context.fillText("x", 45, 145);
+     context.fillText("x", 35, 170);
+}
 
 </script>
 </body>

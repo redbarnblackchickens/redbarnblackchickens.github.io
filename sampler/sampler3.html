@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Soul of Code</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+
+<head>
+
+  <style>
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  border: 1px solid red;
+  background-color: oldlace;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+    border: 1px solid red;
+
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+    border: 1px solid red;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+    border: 1px solid red;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+    border: 1px solid red;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+    border: 1px solid red;
+}
+
+  </style>
+
+</head>
+
+<body onload = init();>
+
+<header>
+		<h2>Valerie Stoehr: <a href="../index.html">The Soul of Code</a></h2> 
+			<p>Back to <a href="../sampler.html">Samplers</a></p>
+		<h1>Sketch 3</h1>
+  
+</header>
+
+<article>
+<h2>Starting point: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla CSS grid layout example</a></h2>
+
+<div class="wrapper">
+  <div class="one">One</div>
+  <div class="two">Two<img src="https://library.si.edu/sites/default/files/nhvz_sil-007-502-05.jpg"></div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+  <div class="five">Five</div>
+  <div class="six">Six</div>
+</div>
+
+</article>
+
+<footer>
+  <p>valerie stoehr | copyright 2021</p>
+</footer>
+
+
+
+
+</body>
+</html>
