@@ -78,6 +78,7 @@ canvas {
 }
 
 img {
+ width: 80%;
   max-width: 100%;
 }
 
@@ -139,7 +140,7 @@ footer {
 
 </head>
 
-<body onload="init();">
+<body>
 
 <header>
 
@@ -154,21 +155,25 @@ footer {
 </header>
 
 
-<article class="main">
-<h1>Sketch 15 (hello canvas)</h2>
-  <P>It was a summer day in the meetinghouse. Why the $%#& is the canvas element indented. And I haven't fully dealt with the weird size jumps as the screen gets larger; the css is currently set for the image that formerly was here.</P>  
-  <figure><canvas id="myCanvas"  width="350" height="295"></canvas><figcaption>Wednesday, July 13, 2003</figcaption></figure>
-<!--
-<img  class="float-intro" src="../images/pot.jpg" alt="" width="30%" >
--->
 
+
+<article class="main">
+<h2>Sketch 1</h2>
+  <P>Lorem ipsum indeed.</P>
+<figure>
+    <img src="../images/wadena2.png"
+         alt="Alt text here">
+    <figcaption>Figure caption text here.</figcaption>
 </article>
 
 
 <article class="sidebar">
-<h2>Sidebar</h2>
-<img  class="float-intro" alt="" src="https://library.si.edu/sites/default/files/nhvz_sil-007-502-05.jpg" >
-<p>This is a sidebar about frog bellies. Lovely is the day the frog swims. Lovely is the day we view the letters of the alphabet. Lovely are the letters. Lovely is the needle. Lovely is the warp, lovely is the weft. Lovely is the frog's skin. Lovely is the cool mud.</p>
+<h2>Sketch 2</h2>
+ <P>Lorem ipsum indeedy indeedy and once again indeed.</P>
+<figure>
+    <img src="../images/wadena3.png"
+         alt="Alt text here">
+    <figcaption>Figure caption text here.</figcaption>
 </article>
 
 
@@ -177,23 +182,7 @@ footer {
 </footer>
 
 
-<script type="text/javascript">
-   function init() {
-    var canvas=document.getElementById('myCanvas');
-    var context=canvas.getContext('2d');
-
-
-   context.font = "normal normal 20px Courier";
-    context.lineWidth = 1;
-    context.fillStyle = "red";
-    context.fillText("x", 120, 180);
-
-    context.fillStyle = "black";
-    context.fillText("x", 55, 220);
-    context.fillText("x", 45, 145);
-     context.fillText("x", 35, 170);
-}
-
+<script>
 </script>
 
 </body>
