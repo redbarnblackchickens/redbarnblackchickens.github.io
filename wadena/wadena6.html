@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wadena Co.</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+	<link rel="stylesheet">
+
+	<style type="text/css">
+
+
+
+		* {
+			box-sizing: border-box;
+		}
+
+
+		body {
+
+			font-family: 'Georgia', serif;
+			font-size: 20px;
+
+		}
+
+		.plat {
+			text-align: center;
+		}
+
+		.grid-container { 
+			display: grid;
+			width: 80%;
+			margin: 0 auto;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-areas: 
+			"header header header header"
+			"one    two    three  four  "
+			"five   six    seven  eight "
+			"footer footer footer footer";
+		}
+
+
+		header {
+			grid-area: header;
+			max-width: 600px;
+		}
+
+		
+		.one {
+			grid-area: one;
+		}
+		
+		.two {
+			grid-area: two;
+		}
+
+		.three {
+			grid-area: three;
+		}
+
+		.four {
+			grid-area: four;
+		}
+
+		.five {
+			grid-area: five;
+		}
+		
+		.six {
+			grid-area: six;
+		}
+
+		.seven {
+			grid-area: seven;
+		}
+
+		.eight {
+			grid-area: eight;
+		}
+
+
+		footer {
+			grid-area: footer;
+		}
+
+	</style>
+
+
+
+
+	<body>
+		
+
+		<div class="grid-container">
+			<header>According to the family stories, my grandmother Emilia Vahvasenpaa Anttila Mattila walked from Wadena to Sebeka to file the claim for the Anttila family homestead, wading in the river to make the journey.</header>
+		
+			<div class="plat one">1</div>
+			<div class="plat two">2</div>
+			<div class="plat three">3</div>
+			<div class="plat four">4</div>
+			<div class="plat five">5</div>
+			<div class="plat six">6</div>
+			<div class="plat seven">7</div>
+			<div class="plat eight">8</div>
+
+			<footer>valerie stoehr | the soul of code</footer>
+		</div>
+	
+	
+	</body>
+	</html>

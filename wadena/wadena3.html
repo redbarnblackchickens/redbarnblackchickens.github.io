@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wadena Co.</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+	<link rel="stylesheet">
+
+	<style type="text/css">
+
+
+
+		* {
+			box-sizing: border-box;
+		}
+
+
+		body {
+			background: #23424a; 
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.container {
+			margin: 2rem 1rem 0 1rem;
+			max-width: 600px;
+		}
+
+		
+
+		h1 {
+			color: white;
+			font-size: 2rem;
+			line-height: 1;
+
+			margin-bottom: 1rem;
+		}
+
+
+		p {
+			color: white;
+			font-size: 1rem;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+
+
+
+		.container { 
+			display: grid;
+			grid-gap: 1em;
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "header header header header"
+    "main main main main"
+   "main main main main"
+    "main main main main"
+     "main main main main"
+    "footer footer footer footer";
+		}
+
+
+		header {
+			grid-area: header;
+		}
+
+		div {
+			height: 100px;
+			width: 100px;
+		}
+
+		.main {
+			grid-area: main;
+			border: 1px solid red;
+			background: navajowhite;
+		}
+
+		footer {
+			grid-area: footer;
+		}
+
+	</style>
+
+
+
+
+	<body>
+		<div class="container">
+			<header><h1>Section 33 -- this isn't working, need to simplify</h1>
+				<p>A family story tells that my great-grandmother Emilia Mattila walked from Wadena, MN, to Sebeka, MN, to file the claim for the Anttila family homestead, wading in the river for part of the trip. In 1889, at age 22, she married August Mattila.</p>
+			</header>
+
+			<div class="main">I am a div</div>
+
+	<div class="main">I am a div</div>
+		<div class="main">I am a div</div>
+			<div class="main">I am a div</div>
+
+		<footer>Hello I am a footer</footer>
+
+
+	</div>
+
+
+</body>
+</html>
