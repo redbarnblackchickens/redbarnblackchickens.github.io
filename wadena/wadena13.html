@@ -31,13 +31,14 @@
 		}
 
 		h1 { 
+			font-size: 2rem;
 			line-height: 2.3rem;
 		}
 
 		.plat {
 			
-			background: gold;
-			border: 1px solid black;
+			background: ivory;
+			border: .5px solid black;
 			width: 20vw;
 			height: 20vw;
 
@@ -48,8 +49,9 @@
 		}
 
 		.owner {
-			text-align: center;
 			font-size: 2rem;
+				border: 2px solid brown;
+
 		}
 
 		.narrative {
@@ -61,7 +63,11 @@
 			width: 80%;
 			max-width: 600px;
 			margin: 0 auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 
+			minmax(auto 1fr) 
+			minmax(auto 1fr)
+			minmax(auto 1fr)
+			minmax(auto 1fr);
 				
 			grid-template-areas: 
 			"header header header header"
@@ -83,6 +89,8 @@
 		
 		.one {
 			grid-area: one;
+			border-top: 1.5px solid black;
+			border-left: 2px solid black;
 		}
 		
 		.two {
@@ -125,10 +133,13 @@
 
 		.eleven {
 			grid-area: eleven;
+			background: #19194C;
 		}
 
 		.twelve {
 			grid-area: twelve;
+			background: #19194C;
+
 		}
 
 		.thirteen {
@@ -166,12 +177,12 @@
 		<div class="grid-container">
 			<header>
 				<h1>Wadena County<br>Section 33</h1>
-				<p>Lorem ipsum text that is here is here and she went to the river and then what happened is detailed there and this is text.</p>
+				
 				
 			</header>
 
 			<div class="plat one"><p class="id">1</p></div>
-			<div class="plat two"><p class="id">2</p><p class="owner">Anttila</p></div>
+			<div class="plat two owner"><p class="id">2</p></div>
 			<div class="plat three"><p><p class="id">3</p><p class="narrative"></p></div>
 			<div class="plat four"><p class="id">4</p></div>
 

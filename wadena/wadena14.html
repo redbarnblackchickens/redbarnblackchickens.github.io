@@ -31,56 +31,54 @@
 		}
 
 		h1 { 
-			line-height: 2.3rem;
+			font-size: 1.8rem;
+			line-height: 1.7rem;
 		}
 
 		.plat {
-			
-			background: gold;
-			border: 1px solid black;
 			width: 20vw;
 			height: 20vw;
+			
+			border: 1px solid black;
 
 		}
 
-		.id {
-			text-align: center;
 		}
 
-		.owner {
-			text-align: center;
-			font-size: 2rem;
-		}
 
 		.narrative {
+			text-align: bottom;
 		}
 
 
 		.grid-container { 
 			display: grid;
+			grid-gap: 1rem;
 			width: 80%;
-			max-width: 600px;
+			max-width: 700px;
 			margin: 0 auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-				
+			grid-template-columns: 1fr 1fr;
+			
 			grid-template-areas: 
-			"header header header header"
-			"one      two      three   four  "
-			"five     six      seven   eight "
-			"nine     ten      eleven  twelve"
-			"thirteen fourteen fifteen sixteen" 
-			"footer   footer   footer  footer";
+			"header    header"
+			".         one   "
+			"narrative one   "
+			"footer    footer";
+
+			align-items: stretch;
 		}
 
 
 		header {
 			grid-area: header;
-			max-width: 600px;
 			padding-bottom: 3px;
 			line-height: 2.4rem;
 		}
 
-		
+		.narrative {
+			grid-area: narrative;
+		}
+
 		.one {
 			grid-area: one;
 		}
@@ -165,33 +163,16 @@
 
 		<div class="grid-container">
 			<header>
-				<h1>Wadena County<br>Section 33</h1>
-				<p>Lorem ipsum text that is here is here and she went to the river and then what happened is detailed there and this is text.</p>
+				<h1>Wadena County</h1>
 				
 			</header>
+			<p class="narrative">My great-great grandmother was born in Ii, Finland, in 1850.</p>
 
-			<div class="plat one"><p class="id">1</p></div>
-			<div class="plat two"><p class="id">2</p><p class="owner">Anttila</p></div>
-			<div class="plat three"><p><p class="id">3</p><p class="narrative"></p></div>
-			<div class="plat four"><p class="id">4</p></div>
-
-			<div class="plat five"><p class="id">5</p></div>
-			<div class="plat six"><p class="id">6</p></div>
-			<div class="plat seven"><p class="id">7</p></div>
-			<div class="plat eight"><p class="id">8</p></div>
-
-			<div class="plat nine"><p class="id">9</p></div>
-			<div class="plat ten"><p class="id">10</p></div>
-			<div class="plat eleven"><p><p class="id">11</p><p class="narrative"></p></div>
-			<div class="plat twelve"><p class="id">12</p></div>
-
-			<div class="plat thirteen"><p class="id">13</p></div>
-			<div class="plat fourteen"><p class="id">14</p></div>
-			<div class="plat fifteen"><p class="id">15</p></div>
-			<div class="plat sixteen"><p class="id">16</p></div>
+			<div class="plat one"></div>
+			
 
 			<footer>valerie stoehr | the soul of code</footer>
-
+			
 		</div>
 
 
