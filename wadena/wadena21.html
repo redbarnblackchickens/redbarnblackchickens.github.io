@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" 
+
+	 content="width=device-width, initial-scale=1.0">
+	
+	<title>Wadena County</title>
+	<link rel="stylesheet">
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Georgia', serif;
+		}
+
+.container-page {
+
+	margin: 0 auto;
+	width: 80%;
+	max-width: 60ch;
+}
+	.container-grid { 
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		
+				
+			grid-template-areas: 
+			"header header header header"
+			"one      two      three   four  "
+			"five     six      seven   eight "
+			/*
+			"nine     ten      eleven  twelve"
+			"thirteen fourteen fifteen sixteen" 
+			*/
+			"footer   footer   footer  footer";
+		}
+
+	header {
+			grid-area: header;
+			line-height: 2.4rem;
+		}
+
+
+	.gallery__img {
+			border: .5px solid black;
+		}
+
+	figcaption {
+		text-align: center;
+	}
+		
+		.one {
+			grid-area: one;
+		}
+		
+		.two {
+			grid-area: two;
+		}
+
+		.three {
+			grid-area: three;
+		}
+
+		.four {
+			grid-area: four;
+		}
+
+		.five {
+			grid-area: five;
+		}
+		
+		.six {
+			grid-area: six;
+		}
+
+		.seven {
+			grid-area: seven;
+		}
+
+		.eight {
+			grid-area: eight;
+		}
+
+		.nine {
+			grid-area: nine;
+		}
+		
+		.ten {
+			grid-area: ten;
+		}
+
+		.eleven {
+			grid-area: eleven;
+		}
+
+		.twelve {
+			grid-area: twelve;
+		}
+
+		.thirteen {
+			grid-area: thirteen;
+		}
+		
+		.fourteen {
+			grid-area: fourteen;
+		}
+
+		.fifteen {
+			grid-area: fifteen;
+		}
+
+		.sixteen {
+			grid-area: sixteen;
+		}
+
+		footer {
+			grid-area: footer;
+			padding-top: 1rem;
+			font-size: 1rem;
+		}
+
+
+
+
+	
+	</style>
+
+	<body>
+	<section class="container-page">
+		<header>
+			<h1>Section 33, Wadena County</h1>
+			<p>If I put a fixed-width image thumbnail of each sketch, the grid isn't responsive. This is probably a better place for flexbox, because I don't care about fixed rows and columns.</p>
+		</header>
+
+		
+    <div class="container-grid">
+           
+                <figure class="plat one">
+                    <img src="../images/wadena1_thumb.png" alt="Gallery image 1" class="gallery__img">
+                	<figcaption><a href="../wadena/wadena1.html">Sketch 1</a>
+                	</figcaption>
+           		</figure>
+                <figure class="plat two">
+                    <img src="img/image-2.jpg" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="plat three">
+                    <img src="img/image-3.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="plat four">
+                    <img src="img/image-4.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="plat five">
+                    <img src="img/image-5.jpg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                <figure class="plat six">
+                    <img src="img/image-6.jpg" alt="Gallery image 6" class="gallery__img">
+                </figure>
+                 <figure class="plat seven">
+                    <img src="img/image-7.jpg" alt="Gallery image 7" class="gallery__img">
+                </figure>
+                <figure class="plat eight">
+                    <img src="img/image-8.jpg" alt="Gallery image 8" class="gallery__img">
+                </figure>
+      
+	</div>  	
+  
+
+
+
+<footer>valerie stoehr | the soul of code</footer>
+</section>	
+</body>
+</html>
