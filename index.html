@@ -11,6 +11,7 @@ href="">
 	<style>
 
 
+
 		h1, h2, h3, h4, h5, h6 {
 			font-family: "Segoe UI", sans-serif;
 			font-weight: 400;  }
@@ -22,13 +23,22 @@ href="">
 				font-family: Georgia, serif;
 				line-height: 1.5;
 				margin: 0 auto; 
-				padding: .75rem;
+
+				
 
 			} 
 
 
-			nav * {
-				padding: 0 10px 0 0;
+			nav  ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+			}
+
+			nav  li {
+				display: inline;
+				text-decoration: none;
 			}
 
 			h1 {
@@ -64,12 +74,13 @@ href="">
 
 
 		<header>
-			
 
 			<nav>
-				<a href="">About</a>
-				<a href="">Essays</a>
-				<a href="">Contact</a>
+				<ul>
+					<li>About | </li>
+					<li>Essays |</li>
+					<li>Contact</li>
+				</ul>
 			</nav>
 
 

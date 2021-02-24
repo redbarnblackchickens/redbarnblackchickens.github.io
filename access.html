@@ -42,16 +42,6 @@ font-size: calc(1em + 1vw); ug no this isn't good
     }
 
 
-  body {
-
-      font-family: 'Georgia', serif; 
-     ;
-
-    }
-
-
-
-
   .container-page {
 
       margin: 0 auto;
@@ -59,27 +49,53 @@ font-size: calc(1em + 1vw); ug no this isn't good
       width: 80%;
     }
 
-  nav * {
-        padding: 0 .8rem 0 0;
+
+
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Segoe UI", sans-serif;
+      font-weight: 400;  }
+
+
+      body {
+        max-width: 40rem;
+        font-size: 1.2rem;    
+        font-family: Georgia, serif;
+        line-height: 1.5;
+        margin: 0 auto; 
+
+        
+
+      } 
+
+
+     
+
+      nav  a {
+        text-decoration: none;
       }
+
+      h1 {
+        font-family: segoe UI;
+        font-size: 3em; 
+        line-height: 1;
+        margin-bottom: .7em;
+      } 
+      
+
+
    
 
-    li, p  {
-      line-height: 1.6rem;
-      padding: 5px 0;
-    } 
 
+      li  { 
+        margin-bottom: .8em;
+      }
 
-    p {
-     
     
-    } 
 
-    img {
-     margin-bottom: 1em;
-   }
 
-   footer {padding-top: 50px;}
+      footer {padding-top: 50px;}
+
 
 
  </style>
@@ -92,10 +108,7 @@ font-size: calc(1em + 1vw); ug no this isn't good
 <header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="">About</a>
-        <a href="">Essays</a>
-        <a href="">Contact</a>
+        <a href="index.html">Home</a> 
       </nav>
   <h1>Accessibility Samplers</h1>
 </header>
@@ -104,8 +117,8 @@ font-size: calc(1em + 1vw); ug no this isn't good
 
 
 <ul>
- <li><p><a href="access/access1.html">Sketch 1</a> demonstrates Heydon's suggestion:</p>
-  <code>font-size: calc(1em + 1vs)</code>.
+ <li><p><a href="access/access1.html">Sketch 1</a> demonstrates Heydon Pickering's <a href="https://beyondtellerrand.com/events/berlin-2016/speakers/heydon-pickering" target="_blank"> responsive typography suggestion</a> from the 2016 Beyond Tellerrand conference:</p>
+  <code>font-size: calc(1em + 1vs);</code>
   <p>This works; it's a bare-bones way to implement responsive typography.</p></li> 
  <li><a href="access/access2.html">Sketch 2</a></li>
  <li><a href="access/access3.html">Sketch 3</a></li> 
