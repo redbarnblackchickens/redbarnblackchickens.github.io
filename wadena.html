@@ -10,8 +10,32 @@
   <style> 
 
   html {
-    font-size: 100%;
-  }  
+
+  font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
+      ((100vw - [start]em) / ([stop] - [start])));
+      
+
+  /* Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of   25em and stopping at 75em or larger." --from Jason Pamental, Beyond Tellerrand 2019 conference, "Dynamic typography with variable fonts." It doesn't seem to have any effect and I get a css validation error that i can't solve.
+
+        font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
+      ((100vw - [start]em) / ([stop] - [start])));
+      
+
+  /* Heydon says: 
+  font-size: calc(1em + 1vw); 
+  */
+
+
+  /* Zell says at https://zellwk.com/blog/viewport-based-typography/
+ font-size: calc(112.5% + 0.5vw); 
+
+  */
+
+ /*
+font-size: calc(1em + 1vw); ug no this isn't good
+*/
+
+}
 
   * {
       box-sizing: border-box;
@@ -21,7 +45,7 @@
   body {
 
       font-family: 'Georgia', serif; 
-      font-size: 120%;
+     ;
 
     }
 
@@ -33,11 +57,6 @@
     }
 
 
-   h1, h2, h3, h4, h5, h6 {
-     font-family: "Segoe UI", sans-serif;
-     font-weight: 400;  }
-
-  
    
 
     li, p  {
@@ -94,7 +113,11 @@
  <li><a href="wadena/wadena18.html">Sketch 18</a></li> 
  <li><a href="wadena/wadena19.html">Sketch 19</a></li> 
  <li><a href="wadena/wadena20.html">Sketch 20</a></li> 
- <li><a href="wadena/wadena21.html">Sketch 21</a></li> 
+ <li><a href="wadena/wadena21.html">Sketch 21</a></li>  
+ <li><a href="wadena/wadena22.html">Sketch 22</a></li> 
+ <li><a href="wadena/wadena23.html">Sketch 23</a></li> 
+ <li><a href="wadena/wadena24.html">Sketch 24</a></li> 
+ <li><a href="wadena/wadena25.html">Sketch 25</a></li> 
 </ul>
 
 
@@ -136,7 +159,6 @@
   <li>Get out the plat map from the box of my parent's stuff and look at it again.</li>
   <li>Make more sketches. For now, get rid of canvas if it's too much to figure out what's going on with it. </li>
 </ul>
-
 
 
 

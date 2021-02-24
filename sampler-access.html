@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Soul of Code</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+
+<head>
+
+  <style> 
+
+  html {
+
+  font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
+      ((100vw - [start]em) / ([stop] - [start])));
+      
+
+  /* Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of   25em and stopping at 75em or larger." --from Jason Pamental, Beyond Tellerrand 2019 conference, "Dynamic typography with variable fonts." It doesn't seem to have any effect and I get a css validation error that i can't solve.
+
+        font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
+      ((100vw - [start]em) / ([stop] - [start])));
+      
+
+  /* Heydon says: 
+  font-size: calc(1em + 1vw); 
+  */
+
+
+  /* Zell says at https://zellwk.com/blog/viewport-based-typography/
+ font-size: calc(112.5% + 0.5vw); 
+
+  */
+
+ /*
+font-size: calc(1em + 1vw); ug no this isn't good
+*/
+
+}
+
+  * {
+      box-sizing: border-box;
+    }
+
+
+  body {
+
+      font-family: 'Georgia', serif; 
+     ;
+
+    }
+
+
+
+
+  .container-page {
+
+      margin: 0 auto;
+      max-width: 50ch;
+      width: 80%;
+    }
+
+  nav * {
+        padding: 0 .8rem 0 0;
+      }
+   
+
+    li, p  {
+      line-height: 1.6rem;
+      padding: 5px 0;
+    } 
+
+
+    p {
+     
+    
+    } 
+
+    img {
+     margin-bottom: 1em;
+   }
+
+   footer {padding-top: 50px;}
+
+
+ </style>
+
+</head>
+
+<body>
+
+<div class="container-page">
+<header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="">About</a>
+        <a href="">Essays</a>
+        <a href="">Contact</a>
+      </nav>
+  <h1>Accessibility Samplers</h1>
+</header>
+
+
+
+
+<ul>
+ <li><p><a href="sampler-access/access1.html">Sketch 1</a> demonstrates Heydon's suggestion:</p>
+  <code>font-size: calc(1em + 1vs)</code>.
+  <p>This works; it's a bare-bones way to implement responsive typography.</p></li> 
+ <li><a href="sampler-access/access2.html">Sketch 2</a></li>
+ <li><a href="sampler-access/access3.html">Sketch 3</a></li> 
+ <li><a href="sampler-access/access4.html">Sketch 4</a></li> 
+ <li><a href="sampler-access/access5.html">Sketch 5</a></li> 
+ <li><a href="sampler-access/access6.html">Sketch 6</a></li> 
+ <li><a href="sampler-access/access7.html">Sketch 7</a></li> 
+ <li><a href="sampler-access/access8.html">Sketch 8</a></li> 
+ <li><a href="sampler-access/access9.html">Sketch 9</a></li> 
+ <li><a href="sampler-access/access10.html">Sketch 10</a></li> 
+ <li><a href="sampler-access/access11.html">Sketch 11</a></li> 
+ <li><a href="sampler-access/access12.html">Sketch 12</a></li> 
+</ul>
+
+
+<h2>Excerpt from studio session on 2/21/21</h2>
+<code>
+  14:39:30 From  Valerie Stoehr (she/her)  to  Everyone :<br>
+  /* The following code supposedly instructs as follows: "Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of  25em and stopping at 75em or larger." --from Jason Pamental, Beyond Tellerrand 2019 conference, "Dynamic typography with variable fonts." <br><br>
+
+       font-size:  calc([size-min]em + ([size-max] - [size-min]) * <br>
+      ((100vw - [start]em) / ([stop] - [start])));<br><br>
+  For me, though, this doesn't seem to have any effect and I get a css validation error that I can't solve.<br><br>
+
+   
+
+15:42:17 From  Valerie Stoehr (she/her)  to  Everyone :<br>
+/* Heydon says to use:<br> 
+  font-size: calc(1em + 1vw); <br><br>
+15:42:32 From  Valerie Stoehr (she/her)  to  Everyone : <br>
+/* Zell says at https://zellwk.com/blog/viewport-based-typography/ to use:<br><br>
+ font-size: calc(112.5% + 0.5vw); <br><br>
+
+15:42:54 From  Valerie Stoehr (she/her)  to  Everyone :<br><br>
+ /*
+font-size: calc(1em + 1vw); ug no this isn't good
+*/<br><br>
+
+15:54:36 From  Valerie Stoehr (she/her)  to  Everyone :<br> https://blueraingallery.com/artists/richard-zane-smith/untitled-13915<br><br>
+
+16:01:36 From  mctavish  to  Everyone :<br> p5.js<br><br>
+
+16:11:55 From  Valerie Stoehr (she/her)  to  Everyone :<br> https://www.youtube.com/watch?v=dTGpyzJUCNI<br><br>
+
+16:15:56 From  Valerie Stoehr (she/her)  to  Everyone :<br> https://nordnorge.com/en/artikkel/the-witch-monument-in-vardo-is-in-memory-of-the-91-witch-trial-victims/<br><br>
+
+16:17:32 From  mctavish  to  Everyone :<br> https://art21.org/artist/ann-hamilton/
+
+</code>
+
+
+
+<footer>
+  <p>valerie stoehr | copyright 2021</p>
+
+</footer>
+<script>
+
+
+</script>
+</body>
+</html>
