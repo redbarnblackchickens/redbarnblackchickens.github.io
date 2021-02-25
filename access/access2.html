@@ -19,8 +19,8 @@
 			font-size: calc(1em + 1vw);
 		}
 		
-.container-page {
-	padding: 0 2px;
+body {
+	padding: 0 10px;
 }
 		nav a {
 			text-decoration: none;
@@ -42,9 +42,13 @@
 		</header>
 
 	
-			<p>This page demonstrates Heydon's calculation, plus a page container that assigns max width and margins.</p>
+			<p>This page demonstrates Heydon's calculation, plus adds padding that keeps the text away from the edge of the viewport. In theory I could add this as a media query because it's a concern only with small screens, but I assigned it to the body for simplicity's sake.</p>
 			<code>html {<br>
 				font-size: calc(1em + 1vw);<br>
+			}
+			<br><br>	
+			body {<br>
+			padding: 0 10px;<br>
 			}
 			</code>
 			<p>No base font size or font family is specified. </p>
