@@ -3,63 +3,77 @@
 <head> 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Heydon's Calculation Plus Bare Essentials</title>
+	<title>Soul of Code</title>
 	
 
 	<link rel="stylesheet">
 
-	<style >
+	<style>
 
 		* {
-			
 			box-sizing: border-box;
+		}
+
+		:root {
+			font-family: montserrat, serif;
 
 		}
 
-
+/*
 		html {
 			font-size: calc(1em + 1vw);
 		}
+		*/
+
+
+
+
+		h1 {
+			font-size: calc(1.3rem + 3.6vw);
+		}
 		
-
-		.container-page {
-			width: max(1vw, 20%, 50vw);
-	
-			margin: 0 auto;
-
+		body {
+			padding: 0 10px;
 		}
 
-
-
+		nav a {
+			text-decoration: none;
+		}
 
 	</style>
 
-
-
-<body>
-
-	<div class="container-page"
+	<body>
+	<div class="container-page">
 
 		<header>
-			<h1>Wadena County #27</h1>
+			<nav>
+				<a href="../index.html">Home</a> ><a href="../access.html"> Accessibility</a>
+			</nav>
+			<h1>Sample #3: Jessica Chan's cresponsive typography alculation</h1>
 		</header>
 
-		<div class="narrative">
-			<p>This page demonstrates Heydon's calculation, plus a page container that assigns max width and margins.</p>
-			<code>html {<br>
-				font-size: calc(1em + 1vw);<br>
+
+		<p>This page demonstrates, from a 2019 article by <a href="https://blog.logrocket.com/the-elements-of-responsive-typography/">Jessica Chan</a>, an alternative to Heydon's font size calculation. It is:</p>
+			<code>
+				h1 {<br>
+				font-size: calc(1.3rem + 3.6vw);<br>
 			}
 			</code>
-			<p>No base font size or font family is specified. </p>
-			<p>In 1890 my great-grandmother lorum ipsum.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id neque sit amet arcu lobortis placerat sit amet at ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus ac nisi placerat condimentum. Mauris ullamcorper interdum commodo. Sed imperdiet laoreet neque, quis commodo erat sodales non. Aenean efficitur luctus urna, vitae vestibulum ex sagittis scelerisque. Sed vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dictumst.</p>
-			<p>She filed a homestead claim in Sebeka, Minnesota.</p>
-			<p>On her journey she waded in the river.</p>
-		</div>
+			<p>And this looks just as bad at large screen widths. Outta control when I expand the page (and too big in general). I can see that clamp() is needed to set an upper limit at large viewports.</p>
+	
+	
+	
 
-		<footer><p>Lorem ipsum dolor sit Lorem ipsum dolor sit valerie stoehr | the soul of code</p></footer>
 
-	</div>
+	<p>Lorum ipsum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id neque sit amet arcu lobortis placerat sit amet at ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus ac nisi placerat condimentum. Mauris ullamcorper interdum commodo. Sed imperdiet laoreet neque, quis commodo erat sodales non. Aenean efficitur luctus urna, vitae vestibulum ex sagittis scelerisque. Sed vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dictumst.</p>
+	<p>She filed a homestead claim in Sebeka, Minnesota.</p>
+	<p>On her journey she waded in the river.</p>
+
+
+	<footer><p>Lorem ipsum dolor sit Lorem ipsum dolor sit valerie stoehr | the soul of code</p></footer>
+
+</div>
 
 </body>
 </html>

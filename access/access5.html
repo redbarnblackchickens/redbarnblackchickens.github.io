@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soul of Code</title>
+	
+
+	<link rel="stylesheet">
+
+	<style>
+
+		* {
+			box-sizing: border-box;
+		}
+
+		:root {
+			font-family: serif;
+
+		}
+
+		html {
+			font-size: 100%;
+		}
+
+body {
+
+	line-height: 1.8;
+}
+
+
+body {
+  margin: 0 auto;
+  width: min(1000px, calc(70% + 100px));
+}
+
+	h1 {
+
+			line-height: 1.3;
+	}
+		body {
+			padding: 0 10px;
+		}
+
+		nav a {
+			text-decoration: none;
+		}
+
+		img {
+			border: 1px solid black;
+		}
+
+			figcaption {
+				font-style: italic;
+			}
+
+	</style>
+
+
+	<body
+	<div class="container-page">
+
+		<header>
+			<nav>
+				<a href="../index.html">Home</a> ><a href="../access.html"> Accessibility</a>
+			</nav>
+			<h1>From the clamp() spec, setting width</h1>
+		</header>
+
+
+		
+			
+	
+	<p>In dealing with width,  clamp() appears to be the tool of choice. Here's an example from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()">the clamp spec</a>:</p>
+	<code>
+body {
+  margin: 0 auto;
+  width: min(1000px, calc(70% + 100px));
+}
+ </code>
+
+<p>Line length should be around 60 to 75 characters; numbers vary, but this is a decent rule of thumb to start. About 2.5 alphabets is another way to gauge it, so I use the following line as a quick way to judge when the line length is set appropriately, along with viewing how other text on the page appears. Line legnth in this case is longer than I want it on a 28-inch monitor in full-screen view.
+<p>AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuvwxyz</p>
+<h2>Sources</h2>
+<ul><li><p><a href="https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility">Use CSS Clamp to create a more flexible wrapper utility</a>, 19 January 2021. To achieve a more flexible setup, this article proposes setting width using clamp(). It recommends using a viewport unit as the ideal [actually, the code specifies 90vw, not 100] and using what one would previously have specified as the max-width as the clamp’s maximum value. The first instance of width is for browsers that don't support clamp().</p>
+<code>
+	/* wrapper that sets a max width, adds a consistent gutter and horizontally centers the contents */
+.wrapper {<br>
+  width: 90vw;<br>
+  width: clamp(16rem, 90vw, 70rem);<br>
+  margin-left: auto;<br>
+  margin-right: auto;<br>
+  padding-left: 1.5rem;<br>
+  padding-right: 1.5rem;<br>
+  position: relative;<br>
+}
+</code></li></ul>
+<!--
+	<p>Mauris ullamcorper interdum commodo. Sed imperdiet laoreet neque, quis commodo erat sodales non. Aenean efficitur luctus urna, vitae vestibulum ex sagittis scelerisque. Sed vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dictumst.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id neque sit amet arcu lobortis placerat sit amet at ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus ac nisi placerat condimentum. Mauris ullamcorper interdum commodo. Sed imperdiet laoreet neque, quis commodo erat sodales non. Aenean efficitur luctus urna, vitae vestibulum ex sagittis scelerisque. Sed vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dictumst.</p>
+	<p>Vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dilsj. Yowj lanelrls sha, coslego tweotigli sijr paoern ls11onsiq1. </p>
+	<p>On her journey she waded in the river.</p>
+-->
+
+	<footer><p>Lorem ipsum dolor sit Lorem ipsum dolor sit valerie stoehr | the soul of code</p></footer>
+
+</div>
+
+</body>
+</html>

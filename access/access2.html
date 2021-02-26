@@ -35,11 +35,12 @@ body {
 			<nav>
 				<a href="../index.html">Home</a> ><a href="../access.html"> Accessibility</a>
 			</nav>
-			<h1>Heydon's Calculation Plus Bare Essentials</h1>
+			<h1>Heydon's calculation, plus create separation from edge of viewport</h1>
 		</header>
 
 	
-			<p>This page demonstrates Heydon's calculation, plus adds padding that keeps the text away from the edge of the viewport. In theory I could add this as a media query because it's a concern only with small screens, but I assigned it to the body for simplicity's sake.</p>
+			<p>This page demonstrates Heydon's calculation, plus adds padding that keeps the text away from the edge of the viewport at small screen sizes. </p>
+			<p>I see conflicting advice and practices about how to accomplish this. Although I know we should often limit the use of pixels as a unit of css measure, in this case the use of pixels seems appropriate. In theory I could add this as a media query because it's a concern only with small screens, but I assigned it to the body because the simplicity of doing so seems to outweigh the need to apply the margin only at small screen sizes.</p>
 			<code>html {<br>
 				font-size: calc(1em + 1vw);<br>
 			}
