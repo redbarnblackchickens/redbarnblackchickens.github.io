@@ -9,45 +9,20 @@
 
   <style> 
 
+:root {font-size: 100%;}
+
+
   html {
-
-  font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
-      ((100vw - [start]em) / ([stop] - [start])));
-      
-
-  /* Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of   25em and stopping at 75em or larger." --from Jason Pamental, Beyond Tellerrand 2019 conference, "Dynamic typography with variable fonts." It doesn't seem to have any effect and I get a css validation error that i can't solve.
-
-        font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
-      ((100vw - [start]em) / ([stop] - [start])));
-      
-
-  /* Heydon says: 
-  font-size: calc(1em + 1vw); 
-  */
-
-
-  /* Zell says at https://zellwk.com/blog/viewport-based-typography/
- font-size: calc(112.5% + 0.5vw); 
-
-  */
-
- /*
-font-size: calc(1em + 1vw); ug no this isn't good
-*/
-
+      font-family: Georgia, serif;
 }
+
+
+
 
   * {
       box-sizing: border-box;
     }
 
-
-  .container-page {
-
-      margin: 0 auto;
-      max-width: 50ch;
-      width: 80%;
-    }
 
 
 
@@ -57,16 +32,8 @@ font-size: calc(1em + 1vw); ug no this isn't good
       font-weight: 400;  }
 
 
-      body {
-        max-width: 40rem;
-        font-size: 1.2rem;    
-        font-family: Georgia, serif;
-        line-height: 1.5;
-        margin: 0 auto; 
 
-        
-
-      } 
+    
 
 
      
@@ -75,26 +42,35 @@ font-size: calc(1em + 1vw); ug no this isn't good
         text-decoration: none;
       }
 
-      h1 {
-        font-family: segoe UI;
-        font-size: 3em; 
-        line-height: 1;
-        margin-bottom: .7em;
-      } 
-      
-
-
-   
 
 
       li  { 
         margin-bottom: .8em;
       }
 
-    
-
+  
 
       footer {padding-top: 50px;}
+
+
+
+
+
+body {
+margin: 0 auto;
+width: min(1000px, calc(70% + 100px));
+}
+
+h1 {
+letter-spacing: 2px;
+font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+}
+
+p {
+line-height: 1.5;
+font-size: clamp(1rem, 2.5vw, 2rem); 
+} 
+
 
 
 
@@ -104,7 +80,6 @@ font-size: calc(1em + 1vw); ug no this isn't good
 
 <body>
 
-<div class="container-page">
 <header>
 
     <nav>
@@ -115,6 +90,77 @@ font-size: calc(1em + 1vw); ug no this isn't good
 
 
 
+    <h2>Findings</h2>
+    <ul>
+      <li>
+
+        <p>A good article by Kathleen McMahon of 24 Accessibility (<a href="https://www.24a11y.com/2019/pixels-vs-relative-units-in-css-why-its-still-a-big-deal/">Pixels vs. Relative Units in CSS: why it’s still a big deal</a>, 2019) reviews the reasons that we must use unitless values in our CSS. The author's experience mirrors mine; there are conflicting opinions about how to implement responsive typography, and sources that I consider to be good ones aren't in alignment. Says McMahon: </p>
+        <blockquote><p>When I first started looking up recommendations on whether or not using pixels in CSS in general is a good idea, I’d find conflicting opinions on the subject, such as articles <a href="https://benfrain.com/just-use-pixels/">like this one</a>  describing why you should just use pixels or should <a href="https://medium.com/@julienetienne/pixels-are-dead-faa87cd8c8b9">stop using pixels in CSS</a>. [This article by Zell] ...about <a href="https://zellwk.com/blog/media-query-units/">responsive sizing in media queries</a> [which argues to use em, not pixels, for media queries]. Even a good article about Accessibility in Resizing Text about the behavior of older browsers.</p>
+
+          <p>There wasn’t much mention — or consideration — that users really do dig into the advanced browser settings to change their default font size.</p></blockquote>
+
+          <li>
+            <p>Several days ago I started out by using the following calculation for font size, because Heydon Pickering is a reasonable source to use. See sketch 1; he proposes using the following code:</p>
+            <code>html {
+              font-size: calc(1em + 1vw);
+            }</code>
+            <p>In my test, body text on a sample page (accessibility sketch #1) is displayed at 28px. </p>
+            
+            <p>And if I adjust the browser's zoom setting the text size on the web page adjusts, so presumably the 1em part of the calculation overcomes the otherwise problematic (potentially inaccessible) vw part of the calculation? But I have cold feet about using vw as part of the calculation...and I can see that failing to use clamp makes things get too big at larger viewport widths.</p></li>
+
+
+<li><p> And then I never got around to troubleshooting this  example from Jason Pamental's presentation at the 2019 Beyond Tellerrand conference ("Dynamic typography with variable fonts"). This doesn't seem to have any effect and I get a css validation error that i can't solve:</p>
+  <code>
+    /* Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of 25em and stopping at 75em or larger. */<br><br>
+
+        font-size:  calc([size-min]em + ([size-max] - [size-min]) * 
+      ((100vw - [start]em) / ([stop] - [start])));</code>
+    </li>
+
+            <li><p>In his <a href="https://zellwk.com/blog/viewport-based-typography/">Viewport Unit Based Typography</a> article (9 March 2016), Zell Liew proposes setting a minimum font-size, then scaling the font with a small viewport multiple by using the calc() property:</p>
+              <code>
+                html { font-size: calc(18px + 0.25vw) }
+              </code>
+
+              <p>Zell says he learned about this technique through Mike Riethmuller’s 2015 <a href="https://www.madebymike.com.au/writing/precise-control-responsive-typography/">Precise control over responsive typography</a>article. Unfortunately, he says that the code doesn’t work on some browsers. Specifically, it doesn’t resize on Safari for Mac, and I don't see updated information about whether this is still true.</p>
+
+              <p>The fix, says Zell, is to combine the use of a percentage unit with viewport width to allow Safari to scale the fonts:</p>
+              <code>html { font-size: calc(112.5% + 0.5vw) }</code>
+              <p>I'm really confused about whether the use of vw to calculate font size breaks accessibility guidelines. Does this work okay if  a user has low vision and resets the default browser font size?</p>
+            
+              </li>
+              <li><p>I figured I needed to focus on clamp in order to eliminate problems at small and large viewport sizes. I liked the simplicity of what designcourse.com advises in a <a href="https://youtu.be/dg488RrpNTc">fluid typography video</a>, but he uses both pixel and viewport width measurements along with ems, and I don't think that is appropriate. Right?</p>
+                <code>h1 { font-size: clamp(40px, 5vw, 70px); }<br>
+                p { font-size: clamp(1em, 2vw, 2em); }</code>
+
+              </li>
+              <li>
+                <p>Yet the clamp spec. itself uses pixels:</p>
+                <code>html {<br>
+                  font-family: sans-serif;<br>
+                }<br><br>
+
+                body {<br>
+                margin: 0 auto;<br>
+                width: min(1000px, calc(70% + 100px));<br>
+              }<br><br>
+
+              h1 {<br>
+              letter-spacing: 2px;<br>
+              font-size: clamp(1.8rem, 2.5vw, 2.8rem);<br>
+            }<br><br>
+
+            p {<br>
+            line-height: 1.5;<br>
+            font-size: max(1.2rem, 1.2vw);<br>
+          }
+        </code>
+      </li>
+    </ul>
+    <p>Conclusion: I'm still confused. The above example in the spec appears to work okay when I adjust the browser's default font size. For now I'm going to use the format shown in the spec as my template, adjusting the values as needed, until I land on a different or better solution. When in doubt, go with the spec. I know that clamp is the correct approach because of the control it gives me as the lower and higher ranges, and I'll learn more as I go along.</p>
+
+
+<h2>Sketches</h2>
 
 <ul>
  <li><p><a href="access/access1.html">Sketch 1</a> demonstrates Heydon Pickering's <a href="https://beyondtellerrand.com/events/berlin-2016/speakers/heydon-pickering" target="_blank"> responsive typography suggestion</a> from the 2016 Beyond Tellerrand conference:</p>
@@ -124,13 +170,8 @@ font-size: calc(1em + 1vw); ug no this isn't good
  <li><a href="access/access3.html">Sketch 3</a></li> 
  <li><a href="access/access4.html">Sketch 4</a></li> 
  <li><a href="access/access5.html">Sketch 5</a></li> 
- <li><a href="access/access6.html">Sketch 6</a></li> 
- <li><a href="access/access7.html">Sketch 7</a></li> 
- <li><a href="access/access8.html">Sketch 8</a></li> 
- <li><a href="access/access9.html">Sketch 9</a></li> 
- <li><a href="access/access10.html">Sketch 10</a></li> 
- <li><a href="access/access11.html">Sketch 11</a></li> 
- <li><a href="access/access12.html">Sketch 12</a></li> 
+
+
 </ul>
 
 
