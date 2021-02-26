@@ -9,8 +9,9 @@
 
   <style> 
 
-:root {font-size: 100%;}
 
+
+    
 
   html {
       font-family: Georgia, serif;
@@ -32,9 +33,39 @@
       font-weight: 400;  }
 
 
+body {
+margin: 1rem auto;
+width: min(800px, calc(50% + 100px));
+}
 
-    
+h1 {
 
+font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
+h2 {
+
+font-size: clamp(1.6rem, 2.6vw, 2.8rem);
+}
+
+
+
+p, li {
+line-height: 1.5;
+font-size: clamp(1rem, 2vw, 2rem); 
+} 
+
+
+code {
+line-height: 1.2;
+font-size: clamp(.8rem, 2vw, 2rem); 
+} 
+
+
+footer {
+padding: 2em 0 0 0;
+
+}
 
      
 
@@ -50,26 +81,8 @@
 
   
 
-      footer {padding-top: 50px;}
 
 
-
-
-
-body {
-margin: 0 auto;
-width: min(1000px, calc(70% + 100px));
-}
-
-h1 {
-letter-spacing: 2px;
-font-size: clamp(1.8rem, 2.5vw, 2.8rem);
-}
-
-p {
-line-height: 1.5;
-font-size: clamp(1rem, 2.5vw, 2rem); 
-} 
 
 
 
@@ -177,7 +190,7 @@ font-size: clamp(1rem, 2.5vw, 2rem);
 </ul>
 
 
-<h2>Excerpt from studio session on 2/21/21</h2>
+<h2>For the archive: excerpt from studio session on 2/21/21</h2>
 <code>
   14:39:30 From  Valerie Stoehr (she/her)  to  Everyone :<br>
   /* The following code supposedly instructs as follows: "Please scale from 2.25em on small screens up to 5em on largest ones, starting at vw of  25em and stopping at 75em or larger." --from Jason Pamental, Beyond Tellerrand 2019 conference, "Dynamic typography with variable fonts." <br><br>
