@@ -15,25 +15,22 @@
 		}
 
 		:root {
-			font-family: montserrat, serif;
+			font-family: georgia, serif;
 
 		}
 
-/*
+
 		html {
-			font-size: calc(1em + 1vw);
-		}
-		*/
-
-
-
-
-		h1 {
-			font-size: calc(1.3rem + 3.6vw);
+			font-size: 100%;
 		}
 		
+		h1 {
+			font-size: calc(1rem + 2.5vw);
+		}
+
+		
 		body {
-			padding: 0 10px;
+			padding: 0 .4rem;
 		}
 
 		nav a {
@@ -43,37 +40,44 @@
 	</style>
 
 	<body>
-	<div class="container-page">
-
-		<header>
-			<nav>
-				<a href="../index.html">Home</a> ><a href="../access.html"> Accessibility</a>
-			</nav>
-			<h1>Sample #3: Jessica Chan's cresponsive typography alculation</h1>
-		</header>
+			<header>
+				<nav>
+					<a href="../index.html">Home</a> ><a href="../access.html"> Accessibility</a>
+				</nav>
+				<h1>Sample #3: Jessica Chan's responsive typography alculation</h1>
+			</header>
 
 
-		<p>This page demonstrates, from a 2019 article by <a href="https://blog.logrocket.com/the-elements-of-responsive-typography/">Jessica Chan</a>, an alternative to Heydon's font size calculation. It is:</p>
-			<code>
-				h1 {<br>
-				font-size: calc(1.3rem + 3.6vw);<br>
-			}
-			</code>
-			<p>And this looks just as bad at large screen widths. Outta control when I expand the page (and too big in general). I can see that clamp() is needed to set an upper limit at large viewports.</p>
+			<p>A <a href="https://blog.logrocket.com/the-elements-of-responsive-typography/">2019 article by Jessica Chan</a> reviews different approaches to responsive typography, all of which feel like dead ends:</p>
+			<ol>
+				<li><p>Set <code>html { font-size: 100%; }</code>, then set font sizes for various element using rems, and add media queries to deal with different device sizes.</p>
+					<p>The h1 on this page was huge when I used that calculation, so I reduced it to <code>
+			h1 {font-size: calc(1rem + 2.5vw)}
+</code>.</p>
+
+
+				</li>
+
+				<li>Introduce the calc() function: <code>h1 {
+					font-size: calc(1.3rem + 3.6vw);
+				}</code><p>But, as she notes, there are accessibility issues with viewport units, and media queries will be necessary.</p></li>
+				<li>	<p>Or, as another option, I can perform the following calculation to establish font sizes:</p>
+					<figure><img src="https://blog.logrocket.com/wp-content/uploads/2019/10/minimum-font-size-nocdn-768x160.png" alt="frightening looking multi-part formula to calculate font size, complex enough that it doesn't make sense to spell out the details, because the point is that we're going to abandon the calculation"><figcaption>From the J. Chan article, an inaccessible image (no alt text!) that shows an approach to calculate responsive font sizes.</figcaption></figure><p>Are you kidding me? No.</p></li>
+				</ol>
+				<p>Jessica's conclusion is to do something like the following...which she acknowledges has issues.</p><code>h1 {
+					font-size: calc(1.3rem + 3.6vw);
+				}</code>
+
+
+
+
+
+		
+
+
+				<footer><p>valerie stoehr | the soul of code</p></footer>
+
 	
-	
-	
 
-
-	<p>Lorum ipsum.</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id neque sit amet arcu lobortis placerat sit amet at ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed at metus ac nisi placerat condimentum. Mauris ullamcorper interdum commodo. Sed imperdiet laoreet neque, quis commodo erat sodales non. Aenean efficitur luctus urna, vitae vestibulum ex sagittis scelerisque. Sed vitae luctus ante, id bibendum diam. Integer in erat et nisl euismod feugiat id tempus sem. In hac habitasse platea dictumst.</p>
-	<p>She filed a homestead claim in Sebeka, Minnesota.</p>
-	<p>On her journey she waded in the river.</p>
-
-
-	<footer><p>Lorem ipsum dolor sit Lorem ipsum dolor sit valerie stoehr | the soul of code</p></footer>
-
-</div>
-
-</body>
-</html>
+		</body>
+		</html>
