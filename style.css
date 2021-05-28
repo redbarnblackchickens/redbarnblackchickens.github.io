@@ -27,7 +27,7 @@ font-weight: 500;
     padding-bottom: 1rem;
 }
 
-  p, a {
+  p, a, button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3125rem;
     line-height: 1.8rem;
@@ -62,7 +62,7 @@ h2 {
 
 .value-1 h2 {
     color: #CA4948;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 
