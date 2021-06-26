@@ -115,26 +115,24 @@ h1 {
 }
 
 
-.value-2 .flex-container {
+.lucia .flex-container {
     flex-wrap: wrap;
 }
 
-.value-3 .flex-container {
+.starry .flex-container {
     flex-wrap: wrap;
 }
 
 
-
-
-.value-2 {
+.lucia {
     margin-top: 1em;
     margin-bottom: 4rem;
 
 
 }
 
-.value-3 {
-    margin-top: 2em;
+.starry {
+     margin-top: 2em; 
 }
 
 /* footer {
