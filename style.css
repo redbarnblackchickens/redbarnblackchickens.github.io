@@ -36,11 +36,7 @@ button {
 }
 
 
-h2 {
-    font-size: 1.5rem;
-    border-bottom: 0;
 
-}
 
 
 
@@ -61,13 +57,13 @@ h2 {
 
 }
 
-.value-1 h2 {
+ .value-1 h2 {
     color: #CA4948;
     font-size: 2.7rem;
     margin-top: 1em;
     padding-bottom: 0em;
     margin-bottom: 0em;
-}
+} 
 
 
 
@@ -86,11 +82,9 @@ h2 {
 
 }
 
-.hero {
-    background-color: #2D4C6B;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    color: white;
+.date {
+    color: #CA4948;
+    font-weight: 800;
 }
 
 h1,
@@ -105,14 +99,27 @@ h1 {
     letter-spacing: 1.5px;
     font-size: 3rem;
     font-weight: 400;
-
+    margin-bottom: 1rem;
 
 }
 
-.date {
-    color: #CA4948;
-    font-weight: 800;
+
+h2 {
+    font-size: 1.3rem;
+    border-bottom: 0;
+    font-weight: 600;
+    margin-top: 1rem;
+
 }
+
+.hero {
+    background-color: #2D4C6B;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    color: white;
+}
+
+
 
 
 .lucia .flex-container {
@@ -126,7 +133,7 @@ h1 {
 
 .lucia {
     margin-top: 1em;
-    margin-bottom: 4rem;
+
 
 
 }
