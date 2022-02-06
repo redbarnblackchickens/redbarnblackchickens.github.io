@@ -78,7 +78,7 @@ button {
 }
 
  .value-1 h2 {
-    color: #CA4948;
+    /* color: #CA4948; */
     font-size: 2.7rem;
     margin-top: 1em;
   
@@ -93,12 +93,9 @@ button {
 }
 
 
-
 .container-flex {
     display: flex;
     gap: 4em;
-
-
 }
 
 .date {
