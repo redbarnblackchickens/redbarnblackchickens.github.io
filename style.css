@@ -46,7 +46,7 @@ h3 {
 h4 {
     font-family: 'Montserrat', sans-serif;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-top: 1.5rem;
 }
@@ -100,16 +100,13 @@ button {
     gap: 4em;
 }
 
-.date {
-    color: #CA4948;
-    font-weight: 800;
-}
 
 h1,
 h2,
 h3,
+h4,
 p {
-    max-width: 54ch;
+    max-width: 50ch;
 }
 
 
