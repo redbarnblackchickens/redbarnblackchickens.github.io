@@ -24,8 +24,8 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    color: #2d4c6b;
-    font-size: 2.7rem;
+    color: #CA4948;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -38,6 +38,8 @@ h2 {
 h3 {
     font-family: 'Montserrat', sans-serif;
     color: #2d4c6b;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
 
@@ -125,21 +127,17 @@ p {
 
 
 
-
 /* .lucia .flex-container {
     flex-wrap: wrap;
-} */
+} 
 
 .starry .flex-container {
     flex-wrap: wrap;
 }
-
+*/
 
 .lucia {
     margin-top: 1em;
-
-
-
 }
 
 .starry {
