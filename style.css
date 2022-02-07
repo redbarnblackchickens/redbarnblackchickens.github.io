@@ -27,7 +27,7 @@ h2 {
     color: #CA4948;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -40,6 +40,7 @@ h3 {
     color: #2d4c6b;
     font-size: 2.5rem;
     font-weight: 400;
+    margin-top: 1.5rem;
 }
 
 
@@ -78,15 +79,6 @@ button {
     color: white;
 
 }
-
-/*
- .value-1 h2 {
-     color: #CA4948; 
-    font-size: 2.7rem;
-    margin-top: 1em;
-  
-} 
-*/
 
 
 
@@ -136,13 +128,7 @@ p {
 }
 */
 
-.lucia {
-    margin-top: 1em;
-}
 
-.starry {
-     margin-top: 2em; 
-}
 
 /* footer {
     background-color: black;
