@@ -28,7 +28,6 @@ font-family: Domine, serif;
 
 
 
-
 h2 {
     font-family: 'Montserrat', sans-serif; 
     color: #2d4c6b;
@@ -57,19 +56,31 @@ h4 {
     margin-top: 1.5rem;
 }
 
-.author  {
-    font-size: .9rem;
-     line-height: 1rem; 
-}
 
 
-
-.type
+h1,
+h2,
+h3,
+h4
 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.2rem; 
+    max-width: 37ch;
 }
+
+p {
+    max-width: 64ch;
+}
+
+p,
+a,
+button {
+    /* font-family: 'Montserrat', sans-serif;  */
+ font-family: Domine, serif;
+    font-size: 1rem;
+     line-height: 1.6rem; 
+
+}
+
+
 
 
 .border-gradient {
@@ -95,20 +106,6 @@ h4 {
 
   }
 
-
-  .type
-  {
-     
-      font-weight: 600;
-     
-  }
-
-.details
-{
-    font-size: .8rem;
-    font-weight: 200;
-    line-height: 1.3rem; 
-}
 /* 
 https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe 
 */
@@ -118,22 +115,66 @@ https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41
     padding: 1rem;
     min-height: 4rem;
 }
+  
 
-.schedule {
+.cards {
+    width: 90%;
+       max-width: 1200px;
+       margin: 0 auto;
+       display: grid;
+       grid-gap: 1rem;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     }
+   
 
-      margin-top: 2rem;
+     .container-page {
+        width: 85%;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    
+.details
+{
+    font-size: .8rem;
+    font-weight: 200;
+    line-height: 1.3rem; 
 }
-  .cards {
- width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
 
 
 
+
+  footer {
+    background-color: #2D4C6B;
+    color: white;
+    margin-top: 2em;
+    padding-top: 1.7em;
+    padding-bottom: 1.7em;
+  
+
+} 
+
+.footer 
+{
+  
+    font-size: .7rem;
+    font-weight: 400;
+    line-height: 1rem; 
+    max-width: 80ch;
+}
+
+
+
+
+
+
+
+.hero {
+    background-color: #2D4C6B;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    color: white;
+}
 
 .hero-text1 {
     font-size: 3rem;
@@ -151,94 +192,17 @@ https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41
     text-align: center;
 }
 
-p,
-a,
-button {
-    /* font-family: 'Montserrat', sans-serif;  */
- font-family: Domine, serif;
-    font-size: 1rem;
-     line-height: 1.6rem; 
 
+.schedule {
+
+    margin-top: 2rem;
 }
 
-
-
-
-
-.button {
-    background-color: #CA4948;
-
-    transition: .2s;
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: 1em 3em;
-
-    display: inline-block;
+.type
+{
+    font-size: 1.2rem;
     font-weight: 600;
-    letter-spacing: 2px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: white;
-
+    line-height: 1.2rem; 
 }
-
-
-
-.container-page {
-    width: 85%;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-
-
-
-
-h1,
-h2,
-h3,
-h4
-{
-    max-width: 37ch;
-}
-
-p {
-    max-width: 64ch;
-}
-
-
-
-
-
-.hero {
-    background-color: #2D4C6B;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    color: white;
-}
-
-
-
-
-
- footer {
-    background-color: #2D4C6B;
-    color: white;
-    margin-top: 2em;
-    padding-top: 1.7em;
-    padding-bottom: 1.7em;
-  
-
-} 
-
-.footer p 
-{
-    color: white;
-    font-size: .7rem;
-    font-weight: 400;
-    line-height: 1.3rem; 
-    max-width: 84ch;
-}
-
 
 
