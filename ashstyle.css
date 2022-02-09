@@ -224,24 +224,24 @@ p {
  footer {
     background-color: #2D4C6B;
     color: white;
-    margin-top: 4.8em;
+    margin-top: 2em;
     padding-top: 1.7em;
     padding-bottom: 1.7em;
   
 
 } 
 
-footer  a
+footer >  a
 {
     color: white;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 400;
     line-height: 1.3rem; 
 }
 
-footer p 
+footer > p 
 {
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 400;
     line-height: 1.3rem; 
     max-width: 84ch;
