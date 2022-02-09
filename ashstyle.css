@@ -231,7 +231,7 @@ p {
 
 } 
 
-footer >  a
+footer  a
 {
     color: white;
     font-size: .7rem;
@@ -239,7 +239,7 @@ footer >  a
     line-height: 1.3rem; 
 }
 
-footer > p 
+footer  p 
 {
     font-size: .7rem;
     font-weight: 400;
