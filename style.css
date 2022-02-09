@@ -70,19 +70,19 @@ button {
 
 
 
-.button {
-    background-color: #CA4948;
+button {
+    background-color: #2D4C6B;
 
     transition: .2s;
     cursor: pointer;
     text-transform: uppercase;
-    padding: 1em 3em;
+    padding: .6em .9em;
 
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 2px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: .8rem;
     color: white;
 
 }
