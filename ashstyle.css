@@ -66,12 +66,13 @@ h4
     max-width: 37ch;
 }
 
-p {
+p, li {
     max-width: 64ch;
 }
 
 p,
 a,
+li,
 button {
     /* font-family: 'Montserrat', sans-serif;  */
  font-family: Domine, serif;
