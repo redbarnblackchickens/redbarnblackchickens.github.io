@@ -82,11 +82,7 @@ button {
 }
 
 
-.brand {
-    font-family: 'Finger Paint', cursive;
-    text-align: center;
-    text-transform: capitalize;
-}
+
 
 .border-gradient {
     border: 10px solid;
@@ -198,6 +194,8 @@ https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41
 
 .image {
     text-align: center;
+    font-family: 'Finger Paint', cursive;
+    text-transform: capitalize;
 }
 
 
