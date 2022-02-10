@@ -82,7 +82,12 @@ button {
 }
 
 
-
+.brand {
+    font-family: 'Finger Paint', cursive;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
 
 .border-gradient {
     border: 10px solid;
