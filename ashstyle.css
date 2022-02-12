@@ -13,8 +13,8 @@ section.hero {
 }
 
 h1 {
-    /* font-family: 'Montserrat', sans-serif;   */
-font-family: Domine, serif;
+     font-family: 'Montserrat', sans-serif;   
+/* font-family: Domine, serif; */
     letter-spacing: 1.5px;
     font-size: 2.8rem;
     font-weight: 200;
