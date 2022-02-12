@@ -209,13 +209,29 @@ https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41
 
 
 .violet {
-  color="#9400D3";
+  color:"#9400D3";
 }
 
 .indigo {
-    color="#4B0082";
+    color:"#4B0082";
 }
 
 .blue {
-    color="#0000FF";
+    color:"#0000FF";
 }
+
+.green {
+   color: #008140;
+}
+
+.yellow {
+    color: #00FF00
+ }
+
+ .orange {
+    color: #FF7F00
+ }
+
+ .red {
+    color: #FF0000
+ }
