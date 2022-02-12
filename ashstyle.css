@@ -171,14 +171,15 @@ https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41
     background-color: #2D4C6B;
     padding-top: 1em;
     padding-bottom: 2em;
-    color: white;
+
 }
 
 .hero-text1 {
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 2.9rem; 
-    margin-bottom:1.5rem;
+   padding-bottom:1.5rem;
+   padding-top:1.5rem;
     color: white;
 
 }
