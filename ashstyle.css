@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+section.hero {
+  margin-bottom: 2rem;
+  padding-bottom: 0.1rem;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: Domine, serif; */
+  letter-spacing: 1.5px;
+  font-size: 2.8rem;
+  font-weight: 200;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: #2d4c6b;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #2d4c6b;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #2d4c6b;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  max-width: 37ch;
+}
+
+p,
+li {
+  max-width: 64ch;
+}
+
+p,
+a,
+li,
+button {
+  /* font-family: 'Montserrat', sans-serif;  */
+  font-family: Domine, serif;
+  /* font-size: 1rem; */
+  line-height: 1.6rem;
+}
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.border-gradient-red {
+  border-image-source: linear-gradient(to left, #4b3795, #08acb1);
+}
+
+.border-gradient-yellow {
+  border-image-source: linear-gradient(to left, #fee32a, #ea4b3b);
+}
+
+.border-gradient-green {
+  border-image-source: linear-gradient(to left, #f06422, #1a9c82);
+}
+
+/* 
+https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe 
+*/
+.card {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  min-height: 4rem;
+}
+
+.cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.city {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin-bottom: 0;
+  margin-top: 0.6rem;
+}
+
+.container-page {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.details {
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.details a {
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background-color: #2d4c6b;
+  color: white;
+  margin-top: 4rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  max-width: 84ch;
+}
+
+.hero {
+  background-color: #2d4c6b;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.hero-text1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-text2 {
+  font-size: 1.2rem;
+  font-weight: 550;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.image {
+  text-align: center;
+}
+
+.schedule {
+  margin-top: 2rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.type {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+}
