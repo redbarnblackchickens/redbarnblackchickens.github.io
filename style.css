@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #2d4c6b;
+
+  transition: 0.2s;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.6em 0.9em;
+
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.container-page {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.container-flex {
+  display: flex;
+  gap: 4em;
+}
+
+footer {
+  background-color: #2d4c6b;
+  color: white;
+  margin-top: 4rem;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  max-width: 84ch;
+}
+
+/* h1 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: white;
+} */
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  max-width: 35ch;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #2d4c6b;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+  max-width: 35ch;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #2d4c6b;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 360ch;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #2d4c6b;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 55ch;
+}
+
+.hero {
+  background-color: #2d4c6b;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  color: white;
+}
+
+.hero-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  max-width: 50ch;
+}
+
+p {
+  max-width: 60ch;
+}
+
+p,
+a,
+li,
+button {
+  /* font-family: 'Montserrat', sans-serif;  */
+  font-family: Domine, serif;
+  /* font-size: 1rem; */
+  line-height: 1.35rem;
+}
